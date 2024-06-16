@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block links %}
+{% endblock %} 
+
+{% block body %}
+<form action="/search" method="POST">
+    <div class = "centTile"><h2>Search</h2></div>
+    <p><input type="text" name="searchText" style="width:100%" value="{{ searchText }}" required/></p>
+    <p><input type="submit" value="Search" /></p>
+</form>
+{% endblock %}

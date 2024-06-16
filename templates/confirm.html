@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block links %}
+{% endblock %} 
+
+{% block body %}
+<form method="POST">
+    <p>{{ predicted_message }}</p>
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+    <h3>Suggested Job Category</h3>
+    <select id="dropdown" name="dropdown">
+        {% for option in options %}
+            {% if option == predicted %}
+                <option value="{{ option }}" selected>{{ option }}</option>
+            {% else %}
+                <option value="{{ option }}">{{ option }}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <input id="typeselect" type="submit" value="Submit">
+</form>
+{% endblock %}

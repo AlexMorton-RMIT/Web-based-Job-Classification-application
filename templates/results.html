@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block links %}
+{% endblock %} 
+
+{% block body %}
+<div class = "centTile"><h1>Search Results</h1> </div>
+
+{% for index in jobIndices %}
+    
+<h4> <a href="{{ url_for('business', job_id=index) }}">{{ jobTitles[index] }}</a> </h4>
+
+{% endfor %}
+{% endblock %}

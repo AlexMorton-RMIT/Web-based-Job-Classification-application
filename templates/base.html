@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }} " type="text/css" media="all" />
+<script src="{{ url_for('static', filename='jquery-3.6.0.js') }}"></script>
+</head>
+
+<body>
+
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/search">Search</a></li>
+  <li><a href="/classify">Enter job</a></li>
+  <div class="topnav-right">
+      <li> {% block links %}       {% endblock %} </li>
+  </div>
+</ul>
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>
